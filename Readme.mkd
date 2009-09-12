@@ -1,0 +1,9 @@
+jpegrescan
+----------
+
+A perl script that uses jpeg tools to optimize jpeg compression by
+micro-managing some of the compression math based on research into some of the
+most common parameters. Ganked from a URL to pastebin.com posted to Hacker
+News. http://pastebin.com/f78dbc4bc
+
+
