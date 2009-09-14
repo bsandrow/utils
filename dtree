@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# dtree: Directory Tree Displayer
+#   Displays a directory tree using ASCII art.
+#   Source = http://www.linuxjournal.com/article/150
+
+(cd ${1-.}; pwd)
+find ${1-.} -type d -print |
+    sort -f |
+    sed -e "s,^${1-.},," -e "/^$/d" -e "s,[^/]*/\([^/]*\)$,\`-----\1," -e "s,[^/]*/,|      ,g"

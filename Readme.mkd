@@ -7,3 +7,9 @@ most common parameters. Ganked from a URL to pastebin.com posted to Hacker
 News. http://pastebin.com/f78dbc4bc
 
 
+dtree
+-----
+
+A little shell script that prints out an ASCII art respresentation of the
+directory tree. Gleaned this from here: http://www.linuxjournal.com/article/150
+
