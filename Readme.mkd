@@ -13,3 +13,8 @@ dtree
 A little shell script that prints out an ASCII art respresentation of the
 directory tree. Gleaned this from here: http://www.linuxjournal.com/article/150
 
+ansicolortable
+--------------
+
+Displays a formatted ANSI color table with the bash/shell escape sequences.
+Source: http://uwstopia.nl/files/2006/07/ansicolortable
