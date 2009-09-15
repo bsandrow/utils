@@ -10,9 +10,11 @@ endif
 ALL_SCRIPTS = $(BASE_SCRIPTS) \
 			  $(EXTRA_SCRIPTS)
 
-BASE_SCRIPTS = dtree
+BASE_SCRIPTS = dtree \
+			   ansicolortable
 
-EXTRA_SCRIPTS = jpegrescan
+EXTRA_SCRIPTS = jpegrescan \
+				mlarc2mbox
 
 .PHONY  = all $(ALL_SCRIPTS)
 

@@ -18,3 +18,9 @@ ansicolortable
 
 Displays a formatted ANSI color table with the bash/shell escape sequences.
 Source: http://uwstopia.nl/files/2006/07/ansicolortable
+
+mlarc2mbox
+----------
+
+Converts an mlarc .txt file into an mbox file. Source:
+http://lists2.ssc.com/pipermail/linux-list/2006-February/026220.html

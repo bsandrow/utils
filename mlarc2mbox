@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+"""
+mlarc2mbox:  Insert line feeds to create mbox format
+
+Usage:   ./mlarc2mbox  infile outfile
+
+source: http://lists2.ssc.com/pipermail/linux-list/2006-February/026220.html
+"""
+import sys
+
+if len(sys.argv) != 3:
+    print __doc__
+    sys.exit()
+
+out = open(sys.argv[2],"w")
+
+start = True
+for line in open(sys.argv[1]):
+    if line.find("From ") == 0:
+        if start:
+            start = False
+        else:
+            out.write("\n")
+        line = line.replace(" at ", "@")
+    out.write(line)
+
+out.close()
+
+
