@@ -14,7 +14,8 @@ BASE_SCRIPTS = dtree \
 			   ansicolortable
 
 EXTRA_SCRIPTS = jpegrescan \
-				mlarc2mbox
+				mlarc2mbox \
+				pause-pulseaudio
 
 .PHONY  = all $(ALL_SCRIPTS)
 

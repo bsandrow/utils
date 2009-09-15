@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# pause-pulseaudio - Pause PulseAudio
+#   Suspends PulseAudio (and anything using it to play). This allows
+#   programs that need to directly access ALSA but aren't playing well
+#   with PulseAudio a chance to work. Source:
+#       http://ubuntuforums.org/showthread.php?t=790889
+
+pasuspender -- /usr/bin/zenity --info --text "Click OK to resume Pulseaudio"

@@ -24,3 +24,11 @@ mlarc2mbox
 
 Converts an mlarc .txt file into an mbox file. Source:
 http://lists2.ssc.com/pipermail/linux-list/2006-February/026220.html
+
+pause-pulseaudio
+----------------
+
+Suspends PulseAudio (and anything using it to play). This allows
+programs that need to directly access ALSA but aren't playing well
+with PulseAudio a chance to work. Source:
+    http://ubuntuforums.org/showthread.php?t=790889
