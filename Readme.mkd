@@ -57,4 +57,23 @@ Some relevant aliases to use on the remote host are:
     alias fixssh='source $HOME/tmp/fixssh'
     alias ssh='fixssh ; ssh'
 
-Source: http://samrowe.com/wordpress/ssh-agent-and-gnu-screen/
+An Emacs function to assist:
+
+    (defun fixssh ()
+      "Run fixssh script for use in GNU screen with X forwarding"
+      (interactive)
+      (save-excursion
+        (let ((buffer (find-file-noselect "~/bin/fixssh")))
+          (set-buffer buffer)
+          (setq buffer-read-only t)
+          (goto-char (point-min))
+          (while (re-search-forward
+                  "\\([A-Z_][A-Z0-9_]*\\) *= *\"\\([^\"]*\\)\"" nil t)
+            (let ((key (match-string 1))
+                  (val (match-string 2)))
+              (setenv key val)))
+          (kill-buffer buffer))))
+
+Source:
+ * [grabssh by Sam Rowe](http://samrowe.com/wordpress/ssh-agent-and-gnu-screen/)
+ * [Emacs Defun by Mike Prentice](http://drunkpotato.livejournal.com/81498.html)
