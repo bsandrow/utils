@@ -1,3 +1,8 @@
+Utils
+=====
+
+These are a scripts/utilities written by others that don't necessarily have a code base/repository/homepage for them.
+
 jpegrescan
 ----------
 
@@ -5,7 +10,6 @@ A perl script that uses jpeg tools to optimize jpeg compression by
 micro-managing some of the compression math based on research into some of the
 most common parameters. Ganked from a URL to pastebin.com posted to Hacker
 News. http://pastebin.com/f78dbc4bc
-
 
 dtree
 -----
@@ -32,3 +36,25 @@ Suspends PulseAudio (and anything using it to play). This allows
 programs that need to directly access ALSA but aren't playing well
 with PulseAudio a chance to work. Source:
     http://ubuntuforums.org/showthread.php?t=790889
+
+grabssh
+-------
+
+Meant to be executed on the remote end of an ssh connection. Creates a script
+that can be sourced by bash to update ssh connection variables. This is useful
+if you have a screen session that was started under a different ssh connection,
+and you want to repair ssh-agent-fowarding (which breaks if you attach from a
+different ssh connection).
+
+Once you create a new ssh connection to the remote host, this script needs to
+be run on the remote host. After the fixssh script is created, you can attach
+the screen session, and run `source /path/to/fixssh` from any terminal under
+the screen session that needs ssh-agent access.
+
+Some relevant aliases to use on the remote host are:
+
+    alias Attach='grabssh ; screen -d -R'
+    alias fixssh='source $HOME/tmp/fixssh'
+    alias ssh='fixssh ; ssh'
+
+Source: http://samrowe.com/wordpress/ssh-agent-and-gnu-screen/
