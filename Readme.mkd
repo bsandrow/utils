@@ -75,5 +75,5 @@ An Emacs function to assist:
           (kill-buffer buffer))))
 
 Source:
- * [grabssh by Sam Rowe](http://samrowe.com/wordpress/ssh-agent-and-gnu-screen/)
- * [Emacs Defun by Mike Prentice](http://drunkpotato.livejournal.com/81498.html)
+ - [grabssh by Sam Rowe](http://samrowe.com/wordpress/ssh-agent-and-gnu-screen/)
+ - [Emacs Defun by Mike Prentice](http://drunkpotato.livejournal.com/81498.html)
