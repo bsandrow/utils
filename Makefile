@@ -11,7 +11,8 @@ ALL_SCRIPTS = $(BASE_SCRIPTS) \
 			  $(EXTRA_SCRIPTS)
 
 BASE_SCRIPTS = dtree \
-			   ansicolortable
+			   ansicolortable \
+			   grabssh
 
 EXTRA_SCRIPTS = jpegrescan \
 				mlarc2mbox \
